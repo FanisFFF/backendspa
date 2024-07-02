@@ -18,7 +18,7 @@
     "typescript": "^5.5.2"
   },
   "scripts": {
-    "start": "node src/server.ts",
+    "start": "node dist/server.js",
     "dev": "nodemon src/server.ts",
     "build": "tsc --build",
     "clean": "tsc --build --clean"
