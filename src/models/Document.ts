@@ -40,7 +40,7 @@ interface IDocument extends Document {
 const documentSchema = new Schema<IDocument>({
   companySigDate: { type: String, required: true },
   postText: { type: String, required: true },
-  // companySignatureName: { type: String, required: true },
+  // companySignatureName: { type: String, required: tirue },
   // documentName: { type: String, required: true },
   // documentStatus: { type: String, required: true },
   // documentType: { type: String, required: true },
