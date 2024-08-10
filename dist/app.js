@@ -14,9 +14,7 @@ require("dotenv/config");
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(express_1.default.json());
-mongoose_1.default.connect(
-// process.env.CONNECTION_STRING as string
-"mongodb://127.0.0.1:27017/newspa", {
+mongoose_1.default.connect(process.env.CONNECTION_STRING, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });

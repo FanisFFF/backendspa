@@ -11,8 +11,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 mongoose.connect(
-  // process.env.CONNECTION_STRING as string
-  "mongodb://127.0.0.1:27017/newspa",
+  process.env.CONNECTION_STRING as string,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
