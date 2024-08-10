@@ -38,7 +38,7 @@ const login = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const isPasswordValid = yield bcrypt_1.default.compare(password, user.password);
     if (!isPasswordValid)
         return res.status(400).json({ error: "Invalid credentials" });
-    const token = jsonwebtoken_1.default.sign({ userId: user._id }, secret, { expiresIn: "1h" });
-    res.json({ token });
+    const token = jsonwebtoken_1.default.sign({ userId: user._id }, secret);
+    res.json({ token, username });
 });
 exports.login = login;
