@@ -1,4 +1,3 @@
-// src/controllers/authController.ts
 import { Request, Response } from "express";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
@@ -29,6 +28,6 @@ export const login = async (req: Request, res: Response) => {
   if (!isPasswordValid)
     return res.status(400).json({ error: "Invalid credentials" });
 
-  const token = jwt.sign({ userId: user._id }, secret, { expiresIn: "1h" });
-  res.json({ token });
+  const token = jwt.sign({ userId: user._id }, secret);
+  res.json({ token, username });
 };

@@ -6,7 +6,6 @@ const secret = "your_jwt_secret";
 
 const authMiddleware = (req: Request, res: Response, next: NextFunction) => {
   const token = req.headers["x-auth"] as string;
-
   if (!token) return res.status(401).json({ error: "No token provided" });
 
   try {
